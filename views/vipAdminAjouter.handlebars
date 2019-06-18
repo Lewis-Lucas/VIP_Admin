@@ -1,0 +1,95 @@
+<div class="menuVipAdmin">
+    <div class="headerMenuVipAdmin">
+        <img src="/images/vips.png" alt="Image Entete">
+    </div>
+    <ul>
+        <li class="divider">&nbsp</li>
+        <li><a href="/ajouter">Ajouter</a></li>
+        <li class="divider">&nbsp</li>
+        <li><a href="/modifier/listerVIP">Modifier</a></li>
+        <li class="divider">&nbsp</li>
+        <li><a href="/supprimer/listerVIP">Supprimer</a></li>
+    </ul>
+</div>
+
+<fieldset>
+    <legend>Ajout VIPs</legend>
+    <form class="ajoutNewVIP" action="/ajoutNewVIP" method="post">
+        <div>
+            <label for="nomVIP">Nom* :</label> <input type="text" id="nomVIP" name="newVIP[nomVIP]" required>
+        </div>
+        <div class="clear"></div>
+        <div>
+            <label for="prenomVIP">Prenom* :</label> <input type="text" id="prenomVIP" name="newVIP[prenomVIP]"
+                                                            required>
+        </div>
+        <div class="clear"></div>
+        <div>
+            <label for="sexeVIP">Sexe :</label>
+            <select id="sexeVIP" name="newVIP[sexeVIP]">
+                <option value="M">Masculin</option>
+                <option value="F">Féminin</option>
+            </select>
+        </div>
+        <div class="clear"></div>
+        <div>
+            <label for="naissanceVIP">Date de naissance* :</label> <input type="date" id="naissanceVIP"
+                                                                          name="newVIP[naissanceVIP]" required>
+        </div>
+        <div class="clear"></div>
+        <div>
+            <label for="nationaliteVIP">Nationalité :</label>
+            <select id="nationaliteVIP" name="newVIP[nationaliteVIP]">
+                {{#each this.nationalite}}
+                    <option value="{{this.nationalite_nuemro}}">{{this.nationalite}}</option>
+                {{/each}}
+            </select>
+        </div>
+        <div class="clear"></div>
+        <div id="commentaire">
+            <label for="commentaireVIP">Commentaire :</label> <textarea id="commentaireVIP"
+                                                                        name="newVIP[commentaireVIP]" onfocus="$(this).autosize()"></textarea>
+        </div>
+        <div class="clear"></div>
+        <div>
+            <label for="photoVIP">Séléctionner l'image :</label> <input type="file" accept="image/*" id="photoVIP"
+                                                                        name="newVIP[photoVIP]">
+        </div>
+        <div class="clear"></div>
+        <div>
+            <label for="sujetPhotoVIP">Sujet de la photo :</label> <input type="text" id="sujetPhotoVIP"
+                                                                          name="newVIP[sujetPhotoVIP]" required>
+        </div>
+        <div class="clear"></div>
+        <div>
+            <label for="commentairePhotoVIP">Commentaire de la photo :</label> <input type="text"
+                                                                                      id="commentairePhotoVIP"
+                                                                                      name="newVIP[commentairePhotoVIP]"
+                                                                                      required>
+        </div>
+        <div class="clear"></div>
+
+        <label for="profession">Profession :</label>
+        <div class="profession">
+            <label for="professionCouturier">Couturier</label>
+            <input id="professionCouturier" type="checkbox" name="profession" value="couturier">
+
+            <label for="professionMannequin">Mannequin</label>
+            <input id="professionMannequin" type="checkbox" name="profession" value="mannequin">
+
+            <label for="professionChanteur">Chanteur</label>
+            <input id="professionChanteur" type="checkbox" name="profession" value="chanteur">
+
+            <label for="professionActeur">Acteur</label>
+            <input id="professionActeur" type="checkbox" name="profession" value="acteur">
+
+            <label for="professionRealisateur">Réalisateur</label>
+            <input id="professionRealisateur" type="checkbox" name="profession" value="realisateur">
+        </div>
+        <div class="clear"></div>
+
+        <button type="submit">Valider</button>
+    </form>
+
+
+</fieldset>

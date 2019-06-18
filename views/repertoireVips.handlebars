@@ -1,0 +1,29 @@
+<div class="menuVipAdmin">
+    <div class="headerMenuVipAdmin">
+        <img src="/images/vips.png" alt="Image Entete">
+    </div>
+    <ul>
+        <li class="divider">&nbsp</li>
+        <li><a href="/ajouter">Ajouter</a></li>
+        <li class="divider">&nbsp</li>
+        <li><a href="/modifier/listerVIP">Modifier</a></li>
+        <li class="divider">&nbsp</li>
+        <li><a href="/supprimer/listerVIP">Supprimer</a></li>
+    </ul>
+</div>
+
+<div class="menuLettres"><b>Cliquez sur une lettre : </b>
+    {{#each lettres}}
+        <a href="/{{../target}}/listerVIP/{{this.lettre}}">
+            {{this.lettre}}
+        </a>
+    {{/each}}
+</div>
+<div class="imageEtNom">
+{{#each personne}}
+    <div class="ListeVIPLettre">
+        <img src="/images/vip/{{this.photo}}" alt="Image Officielle de {{this.prenom}}{{this.nom}}">
+        <a href="/{{../target}}/{{this.numero}}"> {{this.nom}} {{this.prenom}}</a>
+    </div>
+{{/each}}
+</div>

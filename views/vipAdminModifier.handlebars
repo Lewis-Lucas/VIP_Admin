@@ -1,0 +1,91 @@
+<div class="menuVipAdmin">
+    <div class="headerMenuVipAdmin">
+        <img src="/images/vips.png" alt="Image Entete">
+    </div>
+    <ul>
+        <li class="divider">&nbsp</li>
+        <li><a href="/ajouter">Ajouter</a></li>
+        <li class="divider">&nbsp</li>
+        <li><a href="/modifier/listerVIP">Modifier</a></li>
+        <li class="divider">&nbsp</li>
+        <li><a href="/supprimer/listerVIP">Supprimer</a></li>
+    </ul>
+</div>
+
+<fieldset>
+    <legend>Modifier VIPs</legend>
+    <form class="ajoutNewVIP" action="/modifierNewVIP" method="post">
+        <input type="hidden" name="idVip" value="{{infoVip.idVip}}">
+        <div>
+            <label for="nomVIP">Nom* :</label> <input value="{{infoVip.0.nom}}" type="text" id="nomVIP"
+                                                      name="newVIP[nomVIP]" required>
+        </div>
+        <div class="clear"></div>
+        <div>
+            <label for="prenomVIP">Prenom* :</label> <input value="{{infoVip.0.prenom}}" type="text" id="prenomVIP"
+                                                            name="newVIP[prenomVIP]"
+                                                            required>
+        </div>
+        <div class="clear"></div>
+        <div>
+            <label for="sexeVIP">Sexe :</label>
+            <select id="sexeVIP" name="newVIP[sexeVIP]">
+                <option value="M" {{#ifCond "M" "==" infoVip.0.sexe}}
+                        selected="selected"
+                {{/ifCond}}>Masculin
+                </option>
+                <option value="F" {{#ifCond "F" "==" infoVip.0.sexe}}
+                        selected="selected"
+                {{/ifCond}}>Féminin
+                </option>
+            </select>
+        </div>
+        <div class="clear"></div>
+        <div>
+            <label for="naissanceVIP">Date de naissance* :</label> <input
+                value="{{formatDate infoVip.0.dateNaissance "YYYY-MM-DD"}}" type="date" id="naissanceVIP"
+                name="newVIP[naissanceVIP]" required>
+        </div>
+        <div class="clear"></div>
+        <div>
+            <label for="nationaliteVIP">Nationalité :</label>
+            <select id="nationaliteVIP" name="newVIP[nationaliteVIP]">
+                {{#each this.nationalite}}
+                    <option value="{{this.nationalite_nuemro}}"
+                        {{#ifCond this.nationalite_nuemro "==" ../infoVip.0.nationalite}}
+                            selected="selected"
+                        {{/ifCond}}>
+                        {{this.nationalite}}
+                    </option>
+                {{/each}}
+            </select>
+        </div>
+        <div class="clear"></div>
+        <div>
+            <label for="commentaireVIP">Commentaire :</label> <textarea id="commentaireVIP"
+                                                                        name="newVIP[commentaireVIP]">{{infoVip.0.commentaire}}</textarea>
+        </div>
+        <div class="clear"></div>
+        <div>
+            <label for="photoVIP">Séléctionner l'image :</label> <input type="file"
+                                                                        accept="image/*" id="photoVIP"
+                                                                        name="newVIP[photoVIP]">
+        </div>
+        <div class="clear"></div>
+        <div>
+            <label for="sujetPhotoVIP">Sujet de la photo :</label> <input type="text" value="{{infoVip.0.sujetPhoto}}"
+                                                                          id="sujetPhotoVIP"
+                                                                          name="newVIP[sujetPhotoVIP]" required>
+        </div>
+        <div class="clear"></div>
+        <div>
+            <label for="commentairePhotoVIP">Commentaire de la phot :</label> <input type="text"
+                                                                                     value="{{infoVip.0.commentairePhoto}}"
+                                                                                     id="commentairePhotoVIP"
+                                                                                     name="newVIP[commentairePhotoVIP]"
+                                                                                     required>
+        </div>
+        <div class="clear"></div>
+        <button type="submit">Valider</button>
+    </form>
+</fieldset>

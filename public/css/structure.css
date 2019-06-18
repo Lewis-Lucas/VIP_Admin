@@ -1,0 +1,265 @@
+body {
+    font-family: "Segoe UI", "DejaVu Sans", Verdana, sans-serif;
+    background-image: -webkit-linear-gradient(#9f0909, #4e0000);
+    background-image: -o-linear-gradient(#9f0909, #4e0000);
+    background-image: linear-gradient(#9f0909, #4e0000);
+    background-size: 1rem 200rem;
+    font-size: 0.8em;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: #000000;
+}
+
+.monBody #container {
+    width: 1300px;
+    margin: 0 auto;
+
+    background: #ffffff;
+}
+
+.monBody #header {
+    height: 140px;
+    width: 98%;
+    margin-left: 0.7%;
+    background-color: #000;
+    color: #fff;
+}
+
+.menu_haut {
+    background-color: #000;
+    color: #fff;
+    margin-top: -13px;
+    width: 98%;
+    height: 40px;
+    margin-left: 0.7%;
+}
+
+.menu_haut ul {
+    text-align: center;
+    height: 30px;
+    padding: 0;
+}
+
+.menu_haut li {
+    text-decoration: none;
+    font-weight: bold;
+    display: inline;
+    font-size: 14px;
+    padding: 10px 10px 10px 10px;
+    color: #fff;
+    float: left;
+    width: 45%;
+    text-align: center;
+}
+
+.menu_haut li a {
+    color: #fff;
+    text-decoration: none;
+    display: inline;
+    border: 0 none;
+}
+
+.menu_haut li a:hover {
+    color: #000;
+    background: #eee;
+}
+
+.monBody #contenu {
+    padding: 20px;
+    overflow: auto;
+}
+
+.monBody #footer {
+    padding: 0 10px;
+    font-size: 0.8em;
+    text-align: center;
+    height: 150px;
+    background: url(/image/footer.jpg) no-repeat;
+}
+
+.baniere {
+    float: left;
+    margin-top: 20px;
+    margin-left: 5px;
+    border: none;
+}
+
+.baniere img {
+    border: none;
+}
+
+#LogoNode {
+    max-height: 20%;
+    max-width: 20%;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+    color: #0072ff;
+}
+
+.traitVertical {
+    border-left: 1px white solid;
+}
+
+.login {
+    padding: 5%;
+    color: white;
+    background: black;
+}
+
+.login div {
+    width: 20%;
+    margin: 0 auto;
+}
+
+.labelLogin {
+    text-align: left;
+    width: 48%;
+    margin-top: 6px;
+    float: left;
+}
+
+.inputLogin {
+    width: 49%;
+    margin-top: 6px;
+    float: left;
+}
+
+.clear {
+    clear: both;
+}
+
+.btnForm {
+    margin: 4% 2% 0 2%;
+}
+
+.menuVipAdmin {
+    width: 10%;
+    float: left;
+    margin-right: 2%;
+    margin-left: 3%;
+    border: 1px solid black;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    margin-top: 2%;
+}
+
+.menuVipAdmin ul {
+    list-style-type: none;
+    color: white;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    -webkit-border-bottom-left-radius: 5px;
+    -webkit-border-bottom-right-radius: 5px;
+    -moz-border-radius-bottomleft: 5px;
+    -moz-border-radius-bottomright: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.menuVipAdmin a {
+    padding: 6%;
+    color: white;
+    text-decoration: none;
+    font-size: medium;
+    font-weight: bold;
+}
+
+.headerMenuVipAdmin {
+    padding: 3%;
+    background-color: black;
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.divider {
+    background: white;
+    height: 1px;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+fieldset {
+    margin-left: 20%;
+}
+
+.ajoutNewVIP , .ajoutNewPhoto {
+    margin-left: 5%;
+}
+
+.ajoutNewVIP label , .ajoutNewPhoto label {
+    text-align: left;
+    width: 20%;
+    margin-top: 6px;
+    float: left;
+}
+
+.ajoutNewVIP input, select, textarea , .ajoutNewPhoto input, select, textarea{
+    width: 20%;
+    margin-top: 6px;
+    float: left;
+}
+
+.ListeVIPLettre {
+    display: inline-block;
+    text-align: center;
+    margin-top: 5%;
+}
+
+.ListeVIPLettre img {
+    height: 150px;
+}
+
+.ListeVIPLettre a {
+    display: block;
+}
+
+.profession label {
+    width: auto;
+}
+
+.profession input {
+    width: auto;
+    margin-top: 9px;
+    margin-right: 3%;
+}
+
+legend{
+    text-align :left;
+    font-weight: bold;
+}
+#commentaire textarea{
+    width : 70%;
+    height:80px;
+}
+div{
+    padding:0.3%;
+}
+button{
+    border: none;
+    padding:0.5% 1% 0.5% 1%;
+    background: darkgray;
+    box-shadow : 2px 2px 1px grey;
+}
+.menuLettres{
+    text-align:center;
+    padding:0.5%;
+    margin-right: 20%;
+}
+.menuLettres a{
+    padding:0.3%;
+}
+.imageEtNom{
+    margin-right: 20%;
+}

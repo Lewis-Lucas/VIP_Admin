@@ -1,0 +1,25 @@
+<div class="menuVipAdmin">
+    <div class="headerMenuVipAdmin">
+        <img src="/images/vips.png" alt="Image Entete">
+    </div>
+    <ul>
+        <li class="divider">&nbsp</li>
+        <li><a href="/ajouter">Ajouter</a></li>
+        <li class="divider">&nbsp</li>
+        <li><a href="/modifier/listerVIP">Modifier</a></li>
+        <li class="divider">&nbsp</li>
+        <li><a href="/supprimer/listerVIP">Supprimer</a></li>
+    </ul>
+</div>
+
+<div>
+    <form action="/supprimerUnVIP" method="post">
+        <h3>Supprimer : </h3>
+        <p>{{infoVip.nom}} {{infoVip.prenom}} ? </p>
+        <input type="hidden" name="idVip" value="{{infoVip.idVip}}">
+        <button type="submit">Oui</button>
+        <a href="/ajouter">
+            <button type="button">Non</button>
+        </a>
+    </form>
+</div>

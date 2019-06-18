@@ -1,0 +1,50 @@
+<div class="menuVipAdmin">
+    <div class="headerMenuVipAdmin">
+        <img src="/images/vips.png" alt="Image Entete">
+    </div>
+    <ul>
+        <li class="divider">&nbsp</li>
+        <li><a href="/ajouterPhoto">Ajouter</a></li>
+        <li class="divider">&nbsp</li>
+        <li><a href="/supprimerPhoto/listerVIP">Supprimer</a></li>
+    </ul>
+</div>
+
+<fieldset>
+    <legend>Ajout d'une photo</legend>
+    <form class="ajoutNewPhoto" action="/ajoutNewPhoto" method="post">
+        <div>
+            <label for="nomVip">Nom du vip :</label>
+            <select id="nomVip" name="newPhotoVIP[idVip]">
+                {{#each listeVip}}
+                    <option value="{{this.idVip}}">{{this.nom}} {{this.prenom}}</option>
+                {{/each}}
+            </select>
+        </div>
+        <div class="clear"></div>
+
+        <div>
+            <label for="photoVIP">Adresse de l'image :</label> <input type="file" accept="image/*" id="photoVIP"
+                                                                      name="newPhotoVIP[photoVIP]">
+        </div>
+        <div class="clear"></div>
+
+        <div>
+            <label for="sujetPhotoVIP">Titre :</label> <input type="text" id="sujetPhotoVIP"
+                                                              name="newPhotoVIP[sujetPhotoVIP]" required>
+        </div>
+        <div class="clear"></div>
+
+        <div>
+            <label for="commentairePhotoVIP">Un petit commentaire ?</label> <input type="text"
+                                                                                   id="commentairePhotoVIP"
+                                                                                   name="newPhotoVIP[commentairePhotoVIP]"
+                                                                                   required>
+        </div>
+        <div class="clear"></div>
+
+        <button type="submit">Envoyer</button>
+        <button type="reset">Annuler</button>
+    </form>
+
+</fieldset>

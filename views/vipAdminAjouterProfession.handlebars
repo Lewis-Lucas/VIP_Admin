@@ -1,0 +1,38 @@
+<div class="menuVipAdmin">
+    <div class="headerMenuVipAdmin">
+        <img src="/images/vips.png" alt="Image Entete">
+    </div>
+    <ul>
+        <li class="divider">&nbsp</li>
+        <li><a href="/ajouter">Ajouter</a></li>
+        <li class="divider">&nbsp</li>
+        <li><a href="/modifier/listerVIP">Modifier</a></li>
+        <li class="divider">&nbsp</li>
+        <li><a href="/supprimer/listerVIP">Supprimer</a></li>
+    </ul>
+</div>
+
+
+{{#if this.ajouterCouturier}}
+<fieldset>
+    <legend>Ajout VIPs</legend>
+    <form class="ajoutNewVIP" action="/ajoutNewVIP" method="post">
+
+        <button type="submit">Valider</button>
+    </form>
+
+
+</fieldset>
+{{/if}}
+
+{{#if this.ajouterChanteur}}
+    <fieldset>
+        <legend>Ajout VIPs</legend>
+        <form class="ajoutNewVIP" action="/ajoutNewVIP" method="post">
+
+            <button type="submit">Valider</button>
+        </form>
+
+
+    </fieldset>
+{{/if}}
